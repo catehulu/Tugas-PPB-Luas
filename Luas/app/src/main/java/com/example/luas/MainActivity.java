@@ -30,8 +30,18 @@ public class MainActivity extends AppCompatActivity {
                 String panjang = edtPanjang.getText().toString().trim();
                 String lebar = edtLebar.getText().toString().trim();
 
-                double p = Double.parseDouble(panjang);
-                double l = Double.parseDouble(lebar);
+                if (panjang.matches("")){
+                    panjang = "0";
+                }
+
+                if (lebar.matches("")) {
+                    lebar = "0";
+                }
+
+                double p = 0;
+                p = Double.parseDouble(panjang);
+                double l = 0;
+                l = Double.parseDouble(lebar);
 
                 double luas = p * l;
 
